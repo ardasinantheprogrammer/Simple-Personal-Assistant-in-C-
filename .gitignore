@@ -1,32 +1,144 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <ctime>
 
-# Precompiled Headers
-*.gch
-*.pch
+#include <cstring>
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+#include <string>
 
-# Fortran module files
-*.mod
-*.smod
+#include <stdio.h>
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+#include <cmath>
 
-# Executables
-*.exe
-*.out
-*.app
+#include <windows.h>
+
+#include <search.h>
+
+
+#pragma warning(disable: 4996)
+
+using namespace std;
+
+int main() {
+    int a = 0;
+    int b = 1;
+    int c = 2;
+    int d = 3;
+    int password;
+        cout << "                                               Welcome Mr. Arda Sinan                              " << endl;
+        cout << "Please Enter the Password: ";
+        int x = 3;
+        boolean wrongPassword = true;
+
+        while (wrongPassword) {
+
+            cin >> password;
+            if (password == 1234) {
+                cout << "Welcome in Sir!" << endl;
+                wrongPassword = false;
+                break;
+            }
+            else {
+                cout << "The Password is Incorrect" << endl;
+                cout << "Please try again: " << endl;
+
+            }
+            
+            x--;
+        }
+     cout << "-----------" << endl;
+    cout << "How Can I Help You ? " << endl;
+    cout << "What is the weather like in Skopje (Press a)" << endl;
+    cout << "Open YouTube (Press y)" << endl;
+    cout << "Open Instagram (Press i)" << endl;
+    cout << "Open Facebook (Press f)" << endl;
+    cout << "Open Twitter (Press t)" << endl;
+    cout << "Google Search (Press g)" << endl;
+    cout << "-----------" << endl;
+    cout << "Please Make Your Choice" << endl;
+
+    string choice;
+    cin >> choice;
+
+    if (choice == "a") {
+        cout << "The Weather is: " << endl;
+
+        string command;
+
+        command[0] = '/0';
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.accuweather.com/en/mk/skopje/227397/weather-forecast/227397");
+
+    }
+    else if (choice == "y") {
+        cout << "Opening YouTube..." << endl;
+
+        string command;
+
+        command[0] = '/0';
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.youtube.com");
+    }
+    else if (choice == "i") {
+
+        string command;
+
+        command[0] = '/0';
+
+        cout << "Opening Instagram..." << endl;
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.instagram.com");
+
+    }
+    else if (choice == "f") {
+
+        string command;
+
+        command[0] = '/0';
+
+        cout << "Opening Facebook..." << endl;
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.facebook.com");
+
+    }
+    else if (choice == "t") {
+
+        string command;
+
+        command[0] = '/0';
+
+        cout << "Opening Twitter..." << endl;
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.twitter.com");
+
+    }
+    else if (choice == "g") {
+       string command;
+
+        command[0] = '/0';
+        cout << "Opening Google..." << endl;
+
+        const char* charCommand = command.c_str();
+        system(charCommand);
+        system("start https://www.google.com/search?q=");
+
+    }
+    else {
+        cout << "Your Choice Does Not Match Any Option" << endl;
+
+        return 0;
+    }
+
+    return 0;
+
+}
